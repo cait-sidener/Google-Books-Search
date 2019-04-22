@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Search from "./pages/Search";
@@ -16,7 +15,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={Search}/>
-            <Route path="/saved" component={Saved} />
+            <Route path="/saved" component={Saved}/>
           </Switch>
         </div>
       </Router>

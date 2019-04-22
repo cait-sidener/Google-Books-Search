@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const axios = require("axios");
 const db = require("../models");
 const path = require("path");
@@ -43,7 +44,7 @@ module.exports = function(app) {
         );
     });
 
-    app.dete("/api/books/:id", (req, res) => {
+    app.delete("/api/books/:id", (req, res) => {
         db.Book.findByIdAndDelete(req.params.id).then(
             (response) => {
                 res.json({successful: response});
